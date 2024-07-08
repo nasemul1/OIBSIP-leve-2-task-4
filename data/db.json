@@ -1,5 +1,14 @@
 {
-    "user": [
-        
-    ]
+  "user": [
+    {
+      "id": "hello",
+      "email": "abc@gmail.com",
+      "pass": "124"
+    },
+    {
+      "id": "dasd",
+      "email": "dss@gmail.com",
+      "pass": "234"
+    }
+  ]
 }
