@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import side from '../assets/programmer.webp'
-import { useNavigate } from 'react-router-dom';
+import side from '../assets/twist.webp'
+import { Link, useNavigate } from 'react-router-dom';
 
 const Registration = () => {
   const [id, setId] = useState("");
@@ -29,22 +29,21 @@ const Registration = () => {
   }
   return (
     <>
-      <div className='w-full h-dvh flex justify-center items-center bg-gradient-to-r from-cyan-500 to-blue-500'>
-          <div id="regi-card" className='w-10/12 sm:9/12  h-3/5 sm:h-fit text-white bg-white flex rounded-lg drop-shadow-lg'>
-              <div id="left-side" className='w-3/5 hidden sm:flex justify-center items-center'>
-                <img src={side} alt="side image" className='rounded-lg'/>
-              </div>
-              <div id="right-side" className='pl-6 pt-4 pb-4 pr-4 w-full sm:w-2/5 text-black sm:text-white bg-white sm:bg-sky-500/100 sm:rounded-r-lg flex flex-col justify-center items-center'>
-                <form onSubmit={handleSubmit}>
-                  <h1 className='mb-2 font-semibold text-2xl'>User Signup</h1>
-                  <label htmlFor="user" >Username <span className='text-red-600'>*</span></label><br />
-                  <input type="text" id='user' value={id} onChange={e => setId(e.target.value)} className='mb-3 p-1 bg-inherit border rounded-sm outline-none' required/><br />
-                  <label htmlFor="email">Email <span className='text-red-600'>*</span></label><br />
-                  <input type="email" name="email" id="email" value={email} onChange={e => setEmail(e.target.value)} className='mb-3 p-1 bg-inherit border rounded-sm outline-none' required/><br />
-                  <label htmlFor="pass">Password <span className='text-red-600'>*</span></label><br />
-                  <input type="password" name="pass" id="pass" value={pass} onChange={e => setPass(e.target.value)} className='mb-4 p-1 bg-inherit border rounded-sm outline-none' required/><br />
-                  <button type="submit" className='pl-4 pr-4 pt-2 pb-2 mr-3 text-white bg-blue-500 hover:bg-sky-600 border-0 rounded-md'>Proceed</button>
-                  <button className='pl-4 pr-4 pt-2 pb-2 text-white bg-red-500 hover:bg-red-600 border-0 rounded-md'>Back</button>
+      <div className='w-full h-dvh flex justify-center items-center bg-gradient-to-r from-[#E295A0] to-violet-500'>
+          <div id="regi-card" className='w-10/12 h-3/4 text-white bg-white flex rounded-lg drop-shadow-lg'>
+              <div id="left-side" className='w-3/6 hidden md:block bg-cover rounded-l-lg' style={{backgroundImage: `url(${side})`}}></div>
+              <div id="right-side" className='p-6 w-full md:w-3/6 text-black bg-white md:rounded-r-lg flex flex-col justify-center items-center'>
+                <form onSubmit={handleSubmit} className='w-full flex flex-col items-center justify-center'>
+                  <div className='w-3/4'>
+                    <p className='text-left'>Hello !</p>
+                    <p className='text-violet-700 font-bold'>Greetings</p>
+                  </div>
+                  <p className='m-5 align-center text-center'><span className='text-violet-700 font-semibold'>Sign up</span> Your Account</p>
+                  <input placeholder='Username' type="text" id='user' value={id} onChange={e => setId(e.target.value)} className='mb-6 p-2 w-3/4 bg-inherit border-b-2 border-violet-700 rounded-sm outline-none' required/><br />
+                  <input placeholder='Email' type="email" name="email" id="email" value={email} onChange={e => setEmail(e.target.value)} className='mb-6 p-2 w-3/4 bg-inherit border-b-2 border-violet-700 rounded-sm outline-none' required/><br />
+                  <input placeholder='Password' type="password" name="pass" id="pass" value={pass} onChange={e => setPass(e.target.value)} className='mb-10 p-2 w-3/4 bg-inherit border-b-2 border-violet-700 rounded-sm outline-none' required/><br />
+                  <button type="submit" className='pl-4 pr-4 pt-2 pb-2 w-3/4 text-white font-bold bg-violet-700 hover:bg-violet-800 border-0 rounded-sm'>Proceed</button>
+                  <Link to={'/login'} className='mt-6 text-violet-700'>Sign In</Link>
                 </form>
               </div>
           </div>
