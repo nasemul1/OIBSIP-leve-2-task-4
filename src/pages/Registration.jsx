@@ -3,6 +3,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import side from '../assets/twist.webp'
 import { Link, useNavigate } from 'react-router-dom';
+import bcrypt from "bcryptjs";
 
 const Registration = () => {
   const [id, setId] = useState("");
@@ -13,8 +14,8 @@ const Registration = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    let regObj = {id, email, pass};
-    // console.log(regObj);
+    let hashPass = bcrypt.hashSync(pass, 10);
+    let regObj = {id, email, hashPass};
 
     fetch("http://localhost:8000/user", {
       method: "POST",

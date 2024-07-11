@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import side from '../assets/twist.webp'
 import { toast } from 'react-toastify';
 import { Link, useNavigate } from 'react-router-dom';
+import bcrypt from "bcryptjs";
 
 const Login = () => {
   const [user, setUser] = useState('');
@@ -18,17 +19,30 @@ const Login = () => {
     fetch("http://localhost:8000/user/" + user).then((res)=>{
       return res.json();
     }).then((resp)=>{
-      // console.log(resp);
       if(Object.keys(resp).length === 0){
         toast.error('Please enter valid username');
       } else {
-        if(resp.pass === pass){
-          toast.success('Loged In successfully');
-          sessionStorage.setItem('user', user);
-          navigate('/secret');
-        } else {
-          toast.error('Please enter valid ceridentials');
-        }
+        // console.log(resp.hashPass);
+        // if(resp.pass === pass){
+        //   toast.success('Loged In successfully');
+        //   sessionStorage.setItem('user', user);
+        //   navigate('/secret');
+        // } else {
+        //   toast.error('Please enter valid ceridentials');
+        // }
+        bcrypt.compare(pass, resp.hashPass, function(err, res) {
+          if(err){
+            toast.error('Error:' + err.message);
+          }
+          else if(!res){
+            toast.error('Please enter valid ceridentials');
+          }
+          else{
+            toast.success('Loged In successfully');
+            sessionStorage.setItem('user', user);
+            navigate('/secret');
+          }
+        });
       }
     }).catch((err)=>{
       toast.error('Login failed due to: ' + err.message);

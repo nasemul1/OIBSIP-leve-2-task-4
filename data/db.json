@@ -1,19 +1,9 @@
 {
   "user": [
     {
-      "id": "hello",
-      "email": "abc@gmail.com",
-      "pass": "124"
-    },
-    {
-      "id": "dasd",
-      "email": "dss@gmail.com",
-      "pass": "234"
-    },
-    {
       "id": "nasemul1",
-      "email": "abcde@gmail.com",
-      "pass": "123457"
+      "email": "abc@gmail.com",
+      "hashPass": "$2a$10$PPyt/AISBIVsr.Io5umIiOEoVBBAj4owRz.aNk8Bfa1gY33f/AFBG"
     }
   ]
 }
