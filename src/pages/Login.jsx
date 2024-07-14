@@ -60,7 +60,7 @@ const Login = () => {
             <input placeholder='Password' type="password" name="pass" id="pass" value={pass} onChange={e => setPass(e.target.value)} className='mb-10 p-2 w-3/4 bg-inherit border-b-2 border-[#1A459F] rounded-sm outline-none' required/><br />
             <button type="submit" className='pl-4 pr-4 pt-2 pb-2 w-3/4 text-white font-bold bg-[#1A459F] hover:bg-[#2c61d1] border-0 rounded-sm'>Proceed</button>
             <div className='mt-6'>
-              <Link to={'/'} className='mt-6 text-[#1A459F]'>Home</Link>
+              <Link to={'/OIBSIP-level-2-task-4'} className='mt-6 text-[#1A459F]'>Home</Link>
               <span className='ml-2 mr-2'>|</span>
               <Link to={'/registration'} className='mt-6 text-[#1A459F]'>Create a new account</Link>
             </div>
