@@ -18,7 +18,7 @@ function Secret() {
             </div>
             <div id="main" className='w-full p-10 font-bold text-3xl sm:text-4xl flex flex-col items-center'>
                 <h1 className='text-center mb-10'>Secret Page</h1>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=uT2mR_LIJ_7XeBLF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe className='w-11/12 sm:w-3/4 h-auto sm:h-[60vh]' src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=uT2mR_LIJ_7XeBLF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
         </>
     )
