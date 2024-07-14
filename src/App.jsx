@@ -12,9 +12,9 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/OIBSIP-level-2-task-4" element={<Home />}></Route>
-          <Route path="/login" element={<Login />}></Route>
-          <Route path="/registration" element={<Registration />}></Route>
-          <Route path="/secret" element={<Secret />}></Route>
+          <Route path="/OIBSIP-level-2-task-4/login" element={<Login />}></Route>
+          <Route path="/OIBSIP-level-2-task-4/registration" element={<Registration />}></Route>
+          <Route path="/OIBSIP-level-2-task-4/secret" element={<Secret />}></Route>
         </Routes>
       </BrowserRouter>
     </>

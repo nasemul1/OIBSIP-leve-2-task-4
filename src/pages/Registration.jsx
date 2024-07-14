@@ -29,7 +29,7 @@ const Registration = () => {
         body: JSON.stringify(regObj)
       }).then((res)=>{
         toast.success('Registered successfully');
-        navigate('/login');
+        navigate('/OIBSIP-level-2-task-4/login');
       }).catch((err)=>{
         toast.error('Failed:' + err.message);
       });
@@ -54,7 +54,7 @@ const Registration = () => {
                   <div className='mt-6'>
                     <Link to={'/OIBSIP-level-2-task-4'} className='mt-6 text-[#1A459F]'>Home</Link>
                     <span className='ml-2 mr-2'>|</span>
-                    <Link to={'/login'} className='mt-6 text-[#1A459F]'>Login</Link>
+                    <Link to={'/OIBSIP-level-2-task-4/login'} className='mt-6 text-[#1A459F]'>Login</Link>
                   </div>
                 </form>
               </div>

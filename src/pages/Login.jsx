@@ -35,7 +35,7 @@ const Login = () => {
             else{
               toast.success('Loged In successfully');
               sessionStorage.setItem('user', user);
-              navigate('/secret');
+              navigate('/OIBSIP-level-2-task-4/secret');
             }
           });
         }
@@ -62,7 +62,7 @@ const Login = () => {
             <div className='mt-6'>
               <Link to={'/OIBSIP-level-2-task-4'} className='mt-6 text-[#1A459F]'>Home</Link>
               <span className='ml-2 mr-2'>|</span>
-              <Link to={'/registration'} className='mt-6 text-[#1A459F]'>Create a new account</Link>
+              <Link to={'/OIBSIP-level-2-task-4/registration'} className='mt-6 text-[#1A459F]'>Create a new account</Link>
             </div>
           </form>
         </div>

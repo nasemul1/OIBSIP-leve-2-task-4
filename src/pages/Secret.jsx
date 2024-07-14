@@ -14,7 +14,7 @@ function Secret() {
     return (
         <>
             <div id="nav" className='w-screen h-16 bg-violet-700 flex items-center justify-end'>
-                <Link to={'/login'} className='text-white mr-8'>Logout</Link>
+                <Link to={'/OIBSIP-level-2-task-4/login'} className='text-white mr-8'>Logout</Link>
             </div>
             <div id="main" className='w-full p-10 font-bold text-3xl sm:text-4xl flex flex-col items-center'>
                 <h1 className='text-center mb-10'>Secret Page</h1>
