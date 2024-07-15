@@ -40,7 +40,7 @@ const Login = () => {
           });
         }
       }).catch((err)=>{
-        toast.error('Login failed due to: ' + err.message);
+        toast.error('User not found');
       });
   }
 
