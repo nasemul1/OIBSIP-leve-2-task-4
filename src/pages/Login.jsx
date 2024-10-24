@@ -25,7 +25,7 @@ const Login = () => {
           toast.error('Please enter valid username');
         } else {
           bcrypt.compare(pass, resp.hashPass, function(err, res) {
-            console.log(resp);
+            // console.log(resp);
             if(err){
               toast.error('Error: ' + err.message);
             }
